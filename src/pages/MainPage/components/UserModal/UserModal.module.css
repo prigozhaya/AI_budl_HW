@@ -1,0 +1,148 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.closeButton:hover {
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.header {
+  margin-bottom: 32px;
+  padding-right: 40px;
+}
+
+.name {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.email {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.email:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 16px 0;
+}
+
+.address {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  white-space: pre-line;
+}
+
+.mapLink {
+  color: #dc3545;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.mapLink:hover {
+  color: #c82333;
+  text-decoration: underline;
+}
+
+.contactItem {
+  margin-bottom: 12px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.contactItem:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  font-weight: 600;
+  color: #333;
+}
+
+.websiteLink {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.websiteLink:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    padding: 24px;
+    margin: 10px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .sectionTitle {
+    font-size: 18px;
+  }
+
+  .header {
+    padding-right: 30px;
+  }
+}
