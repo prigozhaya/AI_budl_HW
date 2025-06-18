@@ -2,8 +2,6 @@
 
 A modern, responsive React application for managing user data with a professional interface, built with TypeScript and CSS Modules.
 
-![User Management App](https://via.placeholder.com/800x400/007bff/ffffff?text=User+Management+App)
-
 ## 🚀 Features
 
 ### Core Functionality
@@ -18,12 +16,11 @@ A modern, responsive React application for managing user data with a professiona
 - **CSS Modules**: Scoped styling for component isolation
 - **Animations**: Smooth modal transitions and user interactions
 - **API Integration**: Fetches data from JSONPlaceholder API
-- **Error Handling**: Robust error handling and loading states
 - **Testing**: Comprehensive unit and integration tests
 
 ## 🛠️ Technology Stack
 
-- **Framework**: Next.js 14 with App Router
+- **Framework**: React
 - **Language**: TypeScript
 - **Styling**: CSS Modules
 - **Testing**: Vitest + React Testing Library
@@ -44,7 +41,7 @@ A modern, responsive React application for managing user data with a professiona
 
 3. **Run the development server**
    \`\`\`bash
-   npm run dev
+   npm start
    \`\`\`
 
 
@@ -53,10 +50,7 @@ A modern, responsive React application for managing user data with a professiona
 ### Run Tests
 \`\`\`bash
 # Run all tests
-npm test
-
-# Run tests with UI
-npm run test:ui
+npm run test
 
 # Run tests with coverage
 npm run test:coverage
@@ -68,20 +62,6 @@ The application includes comprehensive tests for:
 - User interactions (clicks, modal operations)
 - API integration and error handling
 - Responsive behavior
-
-## 📱 Responsive Design
-
-The application is fully responsive with breakpoints for:
-- **Desktop**: 1024px and above
-- **Tablet**: 768px - 1023px
-- **Mobile**: 480px - 767px
-- **Small Mobile**: Below 480px
-
-### Mobile Features
-- Horizontal scrolling for table on small screens
-- Touch-optimized interactions
-- Fullscreen modal on mobile devices
-- Optimized typography and spacing
 
 ## 🎨 UI/UX Features
 
@@ -97,47 +77,12 @@ The application is fully responsive with breakpoints for:
 - **Button Interactions**: Scale feedback on press
 - **Table Interactions**: Subtle lift effect on row hover
 
-## 📊 Component Architecture
-
-\`\`\`
-src/
-├── app/
-│   ├── page.tsx              # Main application component
-│   ├── page.module.css       # Main page styles
-│   └── globals.css           # Global styles
-├── components/
-│   ├── UserTable.tsx         # User list table component
-│   ├── UserTable.module.css  # Table styles
-│   ├── UserModal.tsx         # User detail modal component
-│   └── UserModal.module.css  # Modal styles
-├── types/
-│   └── user.ts              # TypeScript interfaces
-└── __tests__/
-    ├── App.test.tsx         # Main app tests
-    ├── UserTable.test.tsx   # Table component tests
-    └── UserModal.test.tsx   # Modal component tests
-\`\`\`
-
 ## 🔧 API Integration
 
 The application integrates with JSONPlaceholder API:
 - **Endpoint**: `https://jsonplaceholder.typicode.com/users`
 - **Method**: GET
 - **Response**: Array of user objects with complete user information
-
-### User Data Structure
-\`\`\`typescript
-interface User {
-  id: number
-  name: string
-  username: string
-  email: string
-  address: Address
-  phone: string
-  website: string
-  company: Company
-}
-\`\`\`
 
 ## 🎯 Key Features Explained
 
@@ -158,19 +103,6 @@ interface User {
 - **Visual Feedback**: Confirmation through button animation
 - **UX**: Prevents accidental deletion with hover confirmation
 
-## 🚀 Performance Optimizations
-
-- **CSS Modules**: Scoped styles prevent conflicts
-- **TypeScript**: Compile-time error checking
-- **Responsive Images**: Optimized for different screen sizes
-- **Efficient Rendering**: React best practices for optimal performance
-
-## 🔍 Browser Support
-
-- **Modern Browsers**: Chrome, Firefox, Safari, Edge (latest versions)
-- **Mobile Browsers**: iOS Safari, Chrome Mobile, Samsung Internet
-- **Features**: CSS Grid, Flexbox, CSS Animations, Fetch API
-
 ## 📝 Development Guidelines
 
 ### Code Style
@@ -179,15 +111,6 @@ interface User {
 - Implement proper error boundaries
 - Use CSS Modules for styling
 
-### Testing Strategy
-- Unit tests for individual components
-- Integration tests for user workflows
-- Mock external API calls
-- Test responsive behavior
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
