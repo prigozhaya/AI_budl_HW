@@ -1,6 +1,7 @@
 "use client"
 
 
+import { useEffect, useState } from "react"
 import type { User } from "../../../../types/user/user"
 import styles from "./UserModal.module.css"
 
@@ -10,6 +11,19 @@ interface UserModalProps {
 }
 
 export default function UserModal({ user, onClose }: UserModalProps) {
+  
+    const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+    return () => setIsVisible(false)
+  }, [])
+
+  const handleClose = () => {
+    setIsVisible(false)
+    setTimeout(onClose, 300) // Wait for animation to complete
+  }
+  
   const formatAddress = () => {
     const { street, suite, city, zipcode } = user.address
     return `${street}, ${suite}\n${city}, ${zipcode}`
@@ -21,9 +35,9 @@ export default function UserModal({ user, onClose }: UserModalProps) {
   }
 
   return (
-    <div className={styles.overlay} onClick={onClose}>
-      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.closeButton} onClick={onClose}>
+   <div className={`${styles.overlay} ${isVisible ? styles.visible : ""}`} onClick={handleClose}>
+      <div className={`${styles.modal} ${isVisible ? styles.visible : ""}`} onClick={(e) => e.stopPropagation()}>
+        <button className={styles.closeButton} onClick={handleClose}>
           ×
         </button>
 
@@ -33,6 +47,8 @@ export default function UserModal({ user, onClose }: UserModalProps) {
             {user.email}
           </a>
         </div>
+
+  <div className={styles.divider}></div>
 
         <div className={styles.section}>
           <h3 className={styles.sectionTitle}>Address</h3>

@@ -29,11 +29,18 @@
 .dataRow {
   border-bottom: 1px solid #e9ecef;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
+  position: relative;
 }
 
 .dataRow:hover {
   background-color: #f8f9fa;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dataRow:active {
+  transform: translateY(0);
 }
 
 .dataRow:last-child {
@@ -42,7 +49,7 @@
 
 .dataCell {
   padding: 20px;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .nameEmail {
@@ -80,19 +87,46 @@
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 4px;
+  padding: 8px;
+  border-radius: 50%;
   transition: all 0.2s ease;
   line-height: 1;
+    width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .deleteButton:hover {
   background-color: #dc3545;
   color: white;
+  transform: scale(1.1);
+}
+
+.deleteButton:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 1024px) {
+  .table {
+    font-size: 13px;
+  }
+
+  .headerCell,
+  .dataCell {
+    padding: 16px 12px;
+  }
 }
 
 @media (max-width: 768px) {
+  .tableContainer {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .table {
+    min-width: 800px;
     font-size: 12px;
   }
 
@@ -107,5 +141,22 @@
 
   .email {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table {
+    min-width: 700px;
+  }
+
+  .headerCell,
+  .dataCell {
+    padding: 10px 6px;
+  }
+
+  .deleteButton {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
   }
 }
